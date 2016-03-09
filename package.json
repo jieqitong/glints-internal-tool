@@ -1,28 +1,22 @@
 {
-  "name": "electron-quick-start",
+  "name": "glints-internal-tool",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "A tool for internal use.",
   "main": "main.js",
   "scripts": {
-    "start": "electron main.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/atom/electron-quick-start.git"
+    "start": "electron main.js",
+    "win64": "electron-packager . GlintsInternalTool --platform=win32 --arch=x64 --version=0.36.0 --asar=true",
+    "win32": "electron-packager . GlintsInternalTool --platform=win32 --arch=ia32 --version=0.36.0 --asar=true",
+    "mac": "electron-packager . GlintsInternalTool --platform=darwin --arch=x64 --version=0.36.0 --asar=true",
+    "linux64": "electron-packager . GlintsInternalTool --platform=linux --arch=x64 --version=0.36.0 --asar=true",
+    "linux32": "electron-packager . GlintsInternalTool --platform=linux --arch=ia32 --version=0.36.0 --asar=true"
   },
   "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial"
+    "Glints"
   ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
-  "bugs": {
-    "url": "https://github.com/atom/electron-quick-start/issues"
-  },
-  "homepage": "https://github.com/atom/electron-quick-start#readme",
+  "author": "Tong Jieqi <jieqi@glints.com>",
   "devDependencies": {
+    "electron-packager": "^5.2.1",
     "electron-prebuilt": "^0.36.0"
   }
 }
